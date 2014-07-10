@@ -1,0 +1,103 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="depauw.edu.myro.android.sandbox"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    	<uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".Sandbox" >
+    			 
+        <!-- Main -->
+        
+        <activity android:name="depauw.edu.myro.android.sandbox.MainActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Graphic -->
+        <activity android:name="depauw.edu.myro.android.hierarchy.GraphicActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Canvas -->
+        <activity android:name="depauw.edu.myro.android.sandbox.Graphic_Canvas"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <!-- DeviceListActivity -->
+        <activity android:name="depauw.edu.myro.android.sandbox.DeviceListActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+         <!-- MovementActivity -->
+        <activity android:name="depauw.edu.myro.android.hierarchy.MovementActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+         <!-- Movement_Accelerometer -->
+        <activity android:name="depauw.edu.myro.android.sandbox.Movement_Accelerometer"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+         <!-- InfoActivity -->
+        <activity android:name="depauw.edu.myro.android.sandbox.InfoActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Movement_Controller -->
+        <activity android:name="depauw.edu.myro.android.sandbox.Movement_Controller"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+     </application>
+</manifest>
