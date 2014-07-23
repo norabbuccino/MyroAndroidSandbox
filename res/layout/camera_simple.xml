@@ -13,14 +13,6 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/camera_simple_show"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Scribbler Image"
-            android:src="@drawable/camera"
-            tools:ignore="HardcodedText" />
-
-        <ImageView
             android:id="@+id/camera_simple_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,15 +44,6 @@
             android:layout_above="@+id/camera_on_off"
             android:layout_alignParentLeft="true"
             android:text="Save Picture"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/showPictureButton"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/savePictureButton"
-            android:layout_alignParentLeft="true"
-            android:text="Show Picture"
             tools:ignore="HardcodedText" />
 
     </RelativeLayout>
