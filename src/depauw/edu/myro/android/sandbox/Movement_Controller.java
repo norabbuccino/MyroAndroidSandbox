@@ -2,10 +2,12 @@ package depauw.edu.myro.android.sandbox;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Movement_Controller extends Activity {
 	
@@ -111,4 +113,25 @@ public class Movement_Controller extends Activity {
 			getMenuInflater().inflate(R.menu.main, menu);
 			return true;
 		}
+	  
+	  /**
+		 * Used to help maintain clean activity across the app. If someone is connected 
+		 * to the Scribbler, they should disconnect before leaving the app. This function
+		 * ensures that happens.
+		 */
+	  @Override
+	    public boolean dispatchKeyEvent(KeyEvent event)
+	    {
+			  if (event.getAction() == KeyEvent.ACTION_DOWN) {
+				  switch (event.getKeyCode()) {
+				  case KeyEvent.KEYCODE_HOME: 
+					  if(appState.getScribbler().isConnected()){
+						  appState.getScribbler().disconnect();
+						  Toast.makeText(getApplicationContext(), "Disconnected from Scribbler", Toast.LENGTH_LONG).show();
+					  }
+	      	  return true;
+				  }
+			  }
+			  return super.dispatchKeyEvent(event);  // let the default handling take care of it
+	    }
 }

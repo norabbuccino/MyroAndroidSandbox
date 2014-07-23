@@ -3,7 +3,7 @@ package depauw.edu.myro.andriod;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
-
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.util.Log;
 import depauw.edu.myro.andriod.SetCommands.LED;
 
+@SuppressLint("DefaultLocale")
 public class Scribbler {
   // Debugging
   private static final String TAG = "Scribbler";
@@ -148,6 +149,10 @@ public class Scribbler {
   public void backward(double amount) {
     if (setCommands != null) setCommands._move(-amount, 0);
   }
+  
+  public void stop() {
+	    if (setCommands != null) setCommands._move(0, 0);
+	  }
 
   public void setMoving(boolean isMoving) {
     this.isMoving = isMoving;
@@ -156,7 +161,7 @@ public class Scribbler {
   public boolean isMoving() {
     return isMoving;
   }
-
+  
   public Bitmap takePicture() {
     Bitmap bm = null;
     byte[] ba;
@@ -218,7 +223,6 @@ public class Scribbler {
         }
       }
     }
-
     return bm;
   }
 
@@ -236,7 +240,8 @@ public class Scribbler {
     return value;
   }
 
-  public int[] getIR(String type) {
+  @SuppressLint("DefaultLocale")
+public int[] getIR(String type) {
     int[] ba, ret = null;
 
     type = type.toLowerCase();
@@ -255,7 +260,8 @@ public class Scribbler {
     return ret;
   }
 
-  public int[] getLight(String type) {
+  @SuppressLint("DefaultLocale")
+public int[] getLight(String type) {
     int[] ba, ret = null;
 
     type = type.toLowerCase();
@@ -277,7 +283,8 @@ public class Scribbler {
     return ret;
   }
 
-  public int[] getObstacle(String type) {
+@SuppressLint("DefaultLocale")
+public int[] getObstacle(String type) {
     int[] ba, ret = null;
 
     type = type.toLowerCase();

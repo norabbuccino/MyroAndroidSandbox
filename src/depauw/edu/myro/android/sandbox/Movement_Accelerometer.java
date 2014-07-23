@@ -6,11 +6,22 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+/**
+ * This class enables the use of the Scribbler's movement by utilizing An Android's Accelerometer.
+ * The Accelerometer {@link http://developer.android.com/guide/topics/sensors/sensors_overview.html}
+ * 
+ * 
+ * @author Alexander Miller (DePauw University, Class of 2016), alexander.miller110@gmail.com
+ * @version Summer 2014
+ *
+ */
 public class Movement_Accelerometer extends Activity implements SensorEventListener {
 	
 	private SensorManager sensorManager;	
@@ -72,6 +83,14 @@ public class Movement_Accelerometer extends Activity implements SensorEventListe
 		
 	}
 	
+	/**
+	 * onSensorChanged() checks to see if the scribbler is connected
+	 * and if the Accelerometer is available. If so, then the values
+	 * taken from the Accelerometer are taken and evaluated to perform
+	 * Scribbler movements based on which direction the Android device
+	 * is pointing towards.
+	 * @see android.hardware.SensorEventListener#onSensorChanged(android.hardware.SensorEvent)
+	 */
 	public void onSensorChanged(SensorEvent event){		
 		
 		// check sensor type
@@ -362,4 +381,25 @@ public class Movement_Accelerometer extends Activity implements SensorEventListe
 	         }
 		}
 	}
+	
+	/**
+	 * Used to help maintain clean activity across the app. If someone is connected 
+	 * to the Scribbler, they should disconnect before leaving the app. This function
+	 * ensures that happens.
+	 */
+	@Override
+    public boolean dispatchKeyEvent(KeyEvent event)
+    {
+		  if (event.getAction() == KeyEvent.ACTION_DOWN) {
+			  switch (event.getKeyCode()) {
+			  case KeyEvent.KEYCODE_HOME: 
+				  if(appState.getScribbler().isConnected()){
+					  appState.getScribbler().disconnect();
+					  Toast.makeText(getApplicationContext(), "Disconnected from Scribbler", Toast.LENGTH_LONG).show();
+				  }
+      	  return true;
+			  }
+		  }
+		  return super.dispatchKeyEvent(event);  // let the default handling take care of it
+    }
 }

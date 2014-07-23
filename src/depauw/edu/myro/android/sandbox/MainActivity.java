@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,9 +22,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import depauw.edu.myro.andriod.Scribbler;
+import depauw.edu.myro.android.hierarchy.CameraActivity;
 import depauw.edu.myro.android.hierarchy.GraphicActivity;
 import depauw.edu.myro.android.hierarchy.MovementActivity;
 import depauw.edu.myro.android.hierarchy.MusicActivity;
+import depauw.edu.myro.android.hierarchy.VoiceActivity;
 
 public class MainActivity extends Activity {
 	
@@ -37,7 +40,7 @@ public class MainActivity extends Activity {
 	  // Intent request codes
 	  private static final int REQUEST_CONNECT_DEVICE = 1;
 
-	private String[] firstList = {"Camera -->", "Movement -->", "Information -->", "2D graphics -->", "Music -->"};
+	private String[] firstList = {"Camera -->", "Movement -->", "Information -->", "2D graphics -->", "Music -->", "Voice -->"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +102,12 @@ public class MainActivity extends Activity {
 					Intent musicIntent = new Intent(MainActivity.this, MusicActivity.class);
 					startActivity(musicIntent);
 				}
+				// Voice
+				else if(position == 5)
+				{
+					Intent voiceIntent = new Intent(MainActivity.this, VoiceActivity.class);
+					startActivity(voiceIntent);
+				}
 			}
 		});
 		/*
@@ -106,7 +115,7 @@ public class MainActivity extends Activity {
 		 */
 	}
 
-	@Override
+		@Override
 	  public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.main, menu);
@@ -204,4 +213,20 @@ public class MainActivity extends Activity {
 	        0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 	    s.setDuration(500);
 	  }
+	  
+	  @Override
+	     public boolean dispatchKeyEvent(KeyEvent event)
+	     {
+			  if (event.getAction() == KeyEvent.ACTION_DOWN) {
+				  switch (event.getKeyCode()) {
+				  case KeyEvent.KEYCODE_HOME: 
+					  if(appState.getScribbler().isConnected()){
+						  appState.getScribbler().disconnect();
+						  Toast.makeText(getApplicationContext(), "Disconnected from Scribbler", Toast.LENGTH_LONG).show();
+					  }
+	       	  return true;
+				  }
+			  }
+			  return super.dispatchKeyEvent(event);  // let the default handling take care of it
+	     }
 }

@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="depauw.edu.myro.android.sandbox"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -6,98 +7,218 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
-    
-        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    	
+    	<uses-permission android:name="android.permission.INTERNET" />
+    	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     	<uses-permission android:name="android.permission.BLUETOOTH" />
+    	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
 
     <application
+        android:name=".Sandbox"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".Sandbox" >
-    			 
+        android:theme="@style/AppTheme" >
+
         <!-- Main -->
-        
-        <activity android:name="depauw.edu.myro.android.sandbox.MainActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <!-- Graphic -->
-        <activity android:name="depauw.edu.myro.android.hierarchy.GraphicActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+        <activity
+            android:name="depauw.edu.myro.android.hierarchy.GraphicActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
+
         <!-- Canvas -->
-        <activity android:name="depauw.edu.myro.android.sandbox.Graphic_Canvas"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Graphic_Canvas"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
+
         <!-- DeviceListActivity -->
-        <activity android:name="depauw.edu.myro.android.sandbox.DeviceListActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.DeviceListActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
-         <!-- MovementActivity -->
-        <activity android:name="depauw.edu.myro.android.hierarchy.MovementActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+
+        <!-- MovementActivity -->
+        <activity
+            android:name="depauw.edu.myro.android.hierarchy.MovementActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
-         <!-- Movement_Accelerometer -->
-        <activity android:name="depauw.edu.myro.android.sandbox.Movement_Accelerometer"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+
+        <!-- Movement_Accelerometer -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Movement_Accelerometer"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
-         <!-- InfoActivity -->
-        <activity android:name="depauw.edu.myro.android.sandbox.InfoActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation"
-				  android:screenOrientation="portrait">
+
+        <!-- InfoActivity -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.InfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
+
         <!-- Movement_Controller -->
-        <activity android:name="depauw.edu.myro.android.sandbox.Movement_Controller"
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Movement_Controller"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Movement_Simple_Controller -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Movement_Simple_Controller"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Movement_Explorer -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Movement_Explorer"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- CameraActivity -->
+        <activity
+            android:name="depauw.edu.myro.android.hierarchy.CameraActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Camera_QR -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Camera_QR"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- VoiceActivity -->
+        <activity android:name="depauw.edu.myro.android.hierarchy.VoiceActivity"
                   android:label="@string/app_name"
                   android:configChanges="orientation"
 				  android:screenOrientation="portrait">
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            </activity>
+
+        <!-- Voice_Simple -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Voice_Simple"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- MusicActivity -->
+        <activity
+            android:name="depauw.edu.myro.android.hierarchy.MusicActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Music_Beep -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Music_Beep"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Music_Piano -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Music_Piano"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         
-     </application>
+        <!-- Camera_Simple -->
+        <activity
+            android:name="depauw.edu.myro.android.sandbox.Camera_Simple"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+    </application>
+
 </manifest>

@@ -11,13 +11,25 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
+/**
+ * This class enables the use of the Scribbler's information to be sent to an Android device
+ * in the means of numbers; especially battery level being represented in the form of both 
+ * an integer value and a picture. This picture is one of a battery which changes "charge levels"
+ * based on the integer level received.
+ * 
+ * @author Alexander Miller (DePauw University, Class of 2016), alexander.miller110@gmail.com
+ * @version Summer 2014
+ *
+ */
 public class InfoActivity extends Activity {
   // Debugging
   private static final String TAG = "RobotInfoActivity";
@@ -231,5 +243,26 @@ public class InfoActivity extends Activity {
     // Update Line Values
     lineLeft.setText(Integer.toString(lineValues[0]));
     lineRight.setText(Integer.toString(lineValues[1]));
+  }
+  
+  /**
+	 * Used to help maintain clean activity across the app. If someone is connected 
+	 * to the Scribbler, they should disconnect before leaving the app. This function
+	 * ensures that happens.
+	 */
+  @Override
+  public boolean dispatchKeyEvent(KeyEvent event)
+  {
+		  if (event.getAction() == KeyEvent.ACTION_DOWN) {
+			  switch (event.getKeyCode()) {
+			  case KeyEvent.KEYCODE_HOME: 
+				  if(appState.getScribbler().isConnected()){
+					  appState.getScribbler().disconnect();
+					  Toast.makeText(getApplicationContext(), "Disconnected from Scribbler", Toast.LENGTH_LONG).show();
+				  }
+    	  return true;
+			  }
+		  }
+		  return super.dispatchKeyEvent(event);  // let the default handling take care of it
   }
 }

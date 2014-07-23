@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+    <LinearLayout
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+        <!-- Intro -->
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="35sp"
+            android:text="Simple Controller" />
+    
+        <!-- Forward -->
+        <LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/forwardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Forward:" />
+
+            <EditText
+                android:id="@+id/forwardDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Speed: max 1.0, min -1.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/forwardTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Time: min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/forwardGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+		
+		</LinearLayout>
+		
+        <!-- Backward -->
+        <LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/backwardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Backward:" />
+
+            <EditText
+                android:id="@+id/backwardDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Speed: max 1.0, min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/backwardTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Time: min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/backwardGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+		
+		</LinearLayout>
+		
+        <!-- Turn Left -->
+        <LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/turnLeftText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Turn Left:" />
+
+            <EditText
+                android:id="@+id/turnLeftDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Speed: max 1.0, min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/turnLeftTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Time: min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/turnLeftGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+		
+		</LinearLayout>
+		
+        <!-- Turn Right -->
+        <LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/turnRightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Turn Right:" />
+
+            <EditText
+                android:id="@+id/turnRightDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Speed: max 1.0, min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+            
+            <EditText
+                android:id="@+id/turnRightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Time: min 0.0"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/turnRightGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+		
+		</LinearLayout>
+		
+        <Button
+        	android:id="@+id/stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop" />
+        
+	</LinearLayout>
+	
+</ScrollView>
