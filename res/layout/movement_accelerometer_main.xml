@@ -1,62 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" 
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:weightSum="3">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:ignore="HardcodedText,InefficientWeight" >
 
     <LinearLayout
-		android:orientation="vertical" 
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:layout_weight="1">
-    
-    <ImageView
-        android:id="@+id/accel_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/top_arrow"
-        android:layout_gravity="center" />
-    
-	</LinearLayout>
-	
-    <LinearLayout
-		android:orientation="horizontal" 
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:layout_weight="1">
-    
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
         <ImageView
-        	android:id="@+id/accel_left"
-       		android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:src="@drawable/left_arrow"
-        	android:layout_weight="1" />
-        
-        
-        <ImageView
-        	android:id="@+id/accel_right"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:src="@drawable/right_arrow"
-        	android:layout_weight="1" />
-        
+            android:id="@+id/accel_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/top_arrow"
+            tools:ignore="ContentDescription" />
+
     </LinearLayout>
-    
+
     <LinearLayout
-		android:orientation="vertical" 
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:layout_weight="1">
-        
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
         <ImageView
-        	android:id="@+id/accel_down"
-        	android:layout_width="wrap_content"
-       		android:layout_height="wrap_content"
-        	android:src="@drawable/bottom_arrow"
-       		android:layout_weight="1"
-       		android:layout_gravity="center" />
-    
+            android:id="@+id/accel_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/left_arrow"
+            tools:ignore="NestedWeights,ContentDescription" />
+
+        <ImageView
+            android:id="@+id/accel_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/right_arrow"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/accel_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/bottom_arrow"
+            tools:ignore="NestedWeights,ContentDescription" />
+
     </LinearLayout>
 
     <Button
@@ -65,5 +70,5 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Enable" />
-	
+
 </LinearLayout>
