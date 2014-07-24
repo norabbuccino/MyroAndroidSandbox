@@ -243,6 +243,7 @@ public final class R {
         public static final int disconnect=0x7f040003;
         public static final int duration=0x7f04004a;
         public static final int eight=0x7f040055;
+        public static final int enable=0x7f040056;
         public static final int error_deleting=0x7f04001d;
         public static final int error_external_save=0x7f04001f;
         public static final int five=0x7f040052;
