@@ -1,211 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <!-- android:background="@drawable/key" -->
-
-    <Button
-        android:id="@+id/bkey"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/key" />
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/akey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/bkey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/bkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/gkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/akey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/akey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/bkey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/fkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/gkey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/gkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/akey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/ekey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/fkey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/fkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gkey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/dkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/ekey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/ekey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fkey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/ckey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/dkey"
-        android:background="@drawable/key" />
+        <Button
+            android:id="@+id/dkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ekey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/gsharpkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/gkey"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/blackkey" />
+        <Button
+            android:id="@+id/ckey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dkey"
+            android:background="@drawable/key" />
 
-    <Button
-        android:id="@+id/fsharpkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/fkey"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/blackkey" />
+        <Button
+            android:id="@+id/gsharpkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gkey"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/blackkey" />
 
-    <Button
-        android:id="@+id/dsharpkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/dkey"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/blackkey" />
+        <Button
+            android:id="@+id/fsharpkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fkey"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/blackkey" />
 
-    <Button
-        android:id="@+id/csharpkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ckey"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="22dp"
-        android:background="@drawable/blackkey" />
+        <Button
+            android:id="@+id/dsharpkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dkey"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/blackkey" />
 
-    <Button
-        android:id="@+id/asharpkey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/gsharpkey"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/blackkey" />
+        <Button
+            android:id="@+id/csharpkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ckey"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/blackkey" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ckey"
-        android:layout_marginTop="24dp"
-        android:text="@string/octave"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Button
+            android:id="@+id/asharpkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gsharpkey"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/blackkey" />
 
-    <!--
-    <EditText
-        android:id="@+id/octavenumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-    -->
-
-
-    <!--
-         <Button
-        android:id="@+id/ok_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/octavenumber"
-        android:layout_toRightOf="@+id/octavenumber"
-        android:text="@string/ok" />
-    -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ckey"
+            android:layout_marginTop="22dp"
+            android:text="@string/octave"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginBottom="626dp"
-        android:layout_marginTop="11dp" >
+        android:layout_height="wrap_content" >
 
         <Button
-        android:id="@+id/octave1_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/one" /> 
-        
+            android:id="@+id/octave1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            tools:ignore="ButtonStyle" />
+
         <Button
-        android:id="@+id/octave2_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/two" />
-        
+            android:id="@+id/octave2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            tools:ignore="ButtonStyle" />
+
         <Button
-        android:id="@+id/octave3_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/three" />
-        
+            android:id="@+id/octave3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            tools:ignore="ButtonStyle" />
+
         <Button
-        android:id="@+id/octave4_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/four" />
-        
-        <Button
-        android:id="@+id/octave5_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/five" />
-        
-        <Button
-        android:id="@+id/octave6_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/six" />
-        
-        <Button
-        android:id="@+id/octave7_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/seven" />
-        
-        <Button
-        android:id="@+id/octave8_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eight" />
-        
+            android:id="@+id/octave4_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/octave5_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/octave6_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/octave7_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/octave8_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eight"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>
