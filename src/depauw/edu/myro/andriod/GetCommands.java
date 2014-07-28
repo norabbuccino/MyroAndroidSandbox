@@ -1,3 +1,7 @@
+/*
+ * Code taken from project: https://github.com/sahhhm/Scribdroid
+ */
+
 package depauw.edu.myro.andriod;
 
 import android.util.Log;
