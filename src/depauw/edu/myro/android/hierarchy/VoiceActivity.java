@@ -26,7 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
  */
 public class VoiceActivity extends Activity {
 	
-	private String[] voiceList = {"Simple Voice -->", "Java Docs -->"};
+	private String[] voiceList = {"Simple Voice -->"};
 	private Sandbox appState;
 	
 	@Override
@@ -62,10 +62,6 @@ public class VoiceActivity extends Activity {
 				{
 					Intent voiceSimpleIntent = new Intent(VoiceActivity.this, Voice_Simple.class);
 					startActivity(voiceSimpleIntent);
-				}
-				// Java Docs
-				else if(position == 1)
-				{
 				}
 			}
 		});
