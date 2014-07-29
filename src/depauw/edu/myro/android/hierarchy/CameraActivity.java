@@ -26,7 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
  */
 public class CameraActivity extends Activity{
 	
-	private String[] cameraList = {"QR (Not working yet) -->", "Simple Camera -->","Java Docs -->"};
+	private String[] cameraList = {"QR (Not working yet) -->", "Simple Camera -->"};
 	private Sandbox appState;
 	
 	 @Override
@@ -68,12 +68,6 @@ public class CameraActivity extends Activity{
 				{
 					Intent simpleCameraIntent = new Intent(CameraActivity.this, Camera_Simple.class);
 					startActivity(simpleCameraIntent);
-				}
-				// Java doc
-				else if(position == 2)
-				{
-					//Intent movementIntent = new Intent(MainActivity.this, MovementActivity.class);
-					//startActivity(movementIntent);
 				}
 			}
 		});
