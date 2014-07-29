@@ -19,7 +19,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class GraphicActivity extends Activity {
 	
-	private String[] graphicList = {"Make a Canvas -->", "Java Docs -->"};
+	private String[] graphicList = {"Make a Canvas -->"};
 	private Sandbox appState;
 	
 	@Override
@@ -55,12 +55,6 @@ public class GraphicActivity extends Activity {
 				{
 					Intent canvasIntent = new Intent(GraphicActivity.this, Graphic_Canvas.class);
 					startActivity(canvasIntent);
-				}
-				// Java Docs
-				else if(position == 1)
-				{
-					//Intent movementIntent = new Intent(MainActivity.this, MovementActivity.class);
-					//startActivity(movementIntent);
 				}
 			}
 		});
