@@ -30,7 +30,7 @@ import android.widget.AdapterView.OnItemClickListener;
  */
 public class MovementActivity extends Activity {
 	
-	private String[] movementList = {"Accelerometer -->", "Controller -->", "Explorer -->", "Simple Controller -->", "Java Docs -->"};
+	private String[] movementList = {"Accelerometer -->", "Controller -->", "Explorer -->", "Simple Controller -->"};
 	private Sandbox appState;
 	
 	@Override
@@ -84,10 +84,6 @@ public class MovementActivity extends Activity {
 				{
 					Intent simpleControllerIntent = new Intent(MovementActivity.this, Movement_Simple_Controller.class);
 					startActivity(simpleControllerIntent);
-				}
-				// Java Docs
-				else if(position == 4)
-				{
 				}
 			}
 		});
