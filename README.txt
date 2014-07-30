@@ -25,8 +25,8 @@ Much of the base code, primarily the connection via Bluetooth and decoding the b
 class of 2016) and Leonora Bresette-Buccino (Grinnell College, class 2016) extracted much of the base code from the above repository 
 and created a custom application which offers more insight to the capabilities between MyroScribblers and Android.
 
-	All of the work provided in the summer of 2014 is thanks to a generous grant from the Science Research Foundation (SRF) for Computer
-Science research.
+	All of the work provided in the summer of 2014 is thanks to a generous grant from the National Science Foundation
+
 
 	If you have any questions, please feel free to contact us at:
 	Contact:
